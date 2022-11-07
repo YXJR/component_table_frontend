@@ -11,8 +11,12 @@
       @edit="edit"
       @view="view"
       @del="del"
+      class="margin_top_10"
     ></Table>
-    <Pagination :config="config"></Pagination>
+    <Pagination
+      :config="config"
+      class="margin_top_10"
+    ></Pagination>
     <Dialog
       @ensure="ensure"
       :isAdd="isAdd"
@@ -46,7 +50,7 @@ const mapList = [
 
 let config = addPaginationConfig({
   pageSize: 3,
-  pageSizes: [2, 4, 6],
+  pageSizes: [3, 4, 5],
   total: 0
 })
 

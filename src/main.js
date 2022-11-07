@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store/index.js'
 import router from './router/index.js'
+import '@/assets/style/base.scss'
 
 import ElementUI from 'element-ui'
 //import './element-ui.scss'

@@ -2,6 +2,15 @@ export const tableMixin = {
   mounted() {
     this.TableConfig.getData && this.TableConfig.getData()
   },
+  watch: {
+    TableConfig: {
+      deep: true,
+      immediate: true,
+      handler(newValue) {
+        this.config.total = newValue.tableData.length
+      },
+    },
+  },
   methods: {
     edit(row) {
       this.$store.commit('SET_ISSHOW_DIALOG', true)
@@ -12,8 +21,15 @@ export const tableMixin = {
       this.isAdd = null
     },
     view(row) {
-      //路由跳转...
-      console.log(this.$route.path)
+      //路由跳转,这里能做，也可以调用类里面的view（）方法操作
+      // console.log(this.$route.path)
+      // //可以根据当前的路径配合路由配置表进行跳转操作
+      // this.$router.push({
+      //   name: 'detail',
+      //   params: {
+      //     id: row.id,
+      //   },
+      // })
     },
     del(row) {
       this.TableConfig.del && this.TableConfig.del(this, row.id)

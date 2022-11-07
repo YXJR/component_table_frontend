@@ -3,7 +3,7 @@
     class="width:100px;margin:0 auto;"
     v-loading="TableConfig.loading"
   >
-    这是首页的的表格啊
+
     <el-button
       @click="add"
       type="primary"
@@ -15,8 +15,12 @@
       @edit="edit"
       @view="view"
       @del="del"
+      class="margin_top_10"
     ></Table>
-    <Pagination :config="config"></Pagination>
+    <Pagination
+      :config="config"
+      class="margin_top_10"
+    ></Pagination>
     <Dialog
       @ensure="ensure"
       :isAdd="isAdd"

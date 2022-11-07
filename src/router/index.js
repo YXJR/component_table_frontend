@@ -14,13 +14,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () => import('@/views/about.vue'),
-    children: [
-      {
-        path: 'detail',
-        name: 'aboutDetail',
-        component: () => import('@/views/detail.vue'),
-      },
-    ],
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',
+    component: () => import('@/views/detail.vue'),
   },
 ]
 // 最终生成了一个vue-router实例
