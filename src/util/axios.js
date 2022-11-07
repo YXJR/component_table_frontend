@@ -4,8 +4,8 @@ import axios from 'axios'
 
 class HttpRequest {
   constructor() {
-    this.baseURL = '/'
-    //process.env.NODE_ENV === 'production' ? '/' : 'http://127.0.0.1:7001'
+    this.baseURL =
+      process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:7001'
     this.timeout = 3000
   }
   setInterceptors(instance, url) {
@@ -14,7 +14,8 @@ class HttpRequest {
       return config
     })
     instance.interceptors.response.use((res) => {
-      return res
+      console.log(res.data.data)
+      return Promise.resolve(res.data.data)
     })
   }
   request(options) {

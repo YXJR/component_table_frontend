@@ -29,21 +29,21 @@ import Table from "@/components/table/el-table.vue"
 import Pagination from "@/components/table/el-pagination.vue"
 import Dialog from "@/components/dialog.vue"
 import { addPaginationConfig, addTableConfig } from "@/util/class.js"
-import { tableApi } from "@/api/index.js"
+import { fruitApi } from "@/api/fruit.js"
 import { tableMixin } from "@/util/mixins.js"
 
 const mapList = [
   {
-    label: '姓名',
+    label: '水果',
     prop: 'name'
   },
   {
-    label: '总量2',
-    prop: 'amount2'
+    label: '价格',
+    prop: 'price'
   },
   {
-    label: "总量3",
-    prop: "amount3"
+    label: "库存",
+    prop: "amount"
   },
 ]
 
@@ -54,7 +54,7 @@ let config = addPaginationConfig({
   total: 0
 })
 
-let instance = addTableConfig(mapList, tableApi)
+let instance = addTableConfig(mapList, fruitApi)
 
 export default {
   components: {

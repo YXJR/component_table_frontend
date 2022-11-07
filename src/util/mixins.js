@@ -5,9 +5,11 @@ export const tableMixin = {
   watch: {
     TableConfig: {
       deep: true,
-      immediate: true,
       handler(newValue) {
-        this.config.total = newValue.tableData.length
+        this.config.total =
+          newValue.tableData && newValue.tableData.length
+            ? newValue.tableData.length
+            : 0
       },
     },
   },
@@ -22,14 +24,14 @@ export const tableMixin = {
     },
     view(row) {
       //路由跳转,这里能做，也可以调用类里面的view（）方法操作
-      // console.log(this.$route.path)
-      // //可以根据当前的路径配合路由配置表进行跳转操作
-      // this.$router.push({
-      //   name: 'detail',
-      //   params: {
-      //     id: row.id,
-      //   },
-      // })
+      console.log(this.$route.path)
+      //可以根据当前的路径配合路由配置表进行跳转操作
+      this.$router.push({
+        name: 'detail',
+        params: {
+          id: row.id,
+        },
+      })
     },
     del(row) {
       this.TableConfig.del && this.TableConfig.del(this, row.id)

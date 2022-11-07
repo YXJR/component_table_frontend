@@ -26,7 +26,8 @@ class TableClass {
     this.loading = true
     console.log('触发了getData')
     this.tableApi.getData().then((res) => {
-      this.tableData = res.data
+      console.log(res)
+      this.tableData = res
       this.loading = false
     })
   }

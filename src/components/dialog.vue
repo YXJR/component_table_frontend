@@ -29,7 +29,7 @@ export default {
       return this.$store.state.table.isShowDialog
     },
     title () {
-      return this.isAdd ? '修改' : '新增'
+      return this.isAdd ? '编辑' : '新增'
     }
 
   },
