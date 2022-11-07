@@ -1,6 +1,6 @@
 <template>
   <div
-    class="width:100px;margin:0 auto;"
+    class="component_table"
     v-loading="TableConfig.loading"
   >
 

@@ -1,5 +1,8 @@
 <template>
-  <div v-loading="TableConfig.loading">
+  <div
+    v-loading="TableConfig.loading"
+    class="component_table"
+  >
     <el-button
       @click="add"
       type="primary"
