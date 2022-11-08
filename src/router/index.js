@@ -1,29 +1,29 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue"
+import VueRouter from "vue-router"
 
 Vue.use(VueRouter)
 
 const routes = [
   // 映射表  用户配置
   {
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/home.vue'),
+    path: "/",
+    name: "home",
+    component: () => import("@/views/home.vue"),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('@/views/about.vue'),
+    path: "/about",
+    name: "about",
+    component: () => import("@/views/about.vue"),
   },
   {
-    path: '/detail/:id',
-    name: 'detail',
-    component: () => import('@/views/detail.vue'),
+    path: "/detail/:id",
+    name: "detail",
+    component: () => import("@/views/detail.vue"),
   },
 ]
 // const store = Vuex.Store()
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes,
 })
 
