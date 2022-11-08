@@ -21,7 +21,6 @@ const routes = [
     component: () => import('@/views/detail.vue'),
   },
 ]
-// 最终生成了一个vue-router实例
 // const store = Vuex.Store()
 const router = new VueRouter({
   mode: 'history',

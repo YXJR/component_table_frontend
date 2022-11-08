@@ -29,9 +29,10 @@
 <script>
 
 import Table from "@/components/table/el-table.vue"
-import Pagination from "@/components/table/el-pagination.vue"
+import Pagination from "@/components/pagination/el-pagination.vue"
 import Dialog from "@/components/dialog.vue"
-import { addPaginationConfig, addTableConfig } from "@/util/class.js"
+import { addPaginationConfig } from "@/components/pagination/configHook.js"
+import { addTableConfig } from "@/components/table/configHook.js"
 import { fruitApi } from "@/api/fruit.js"
 import { tableMixin } from "@/util/mixins.js"
 

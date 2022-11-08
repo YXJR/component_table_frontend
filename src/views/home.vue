@@ -30,9 +30,10 @@
 <script>
 
 import Table from "@/components/table/el-table.vue"
-import Pagination from "@/components/table/el-pagination.vue"
+import Pagination from "@/components/pagination/el-pagination.vue"
 import Dialog from "@/components/dialog.vue"
-import { addPaginationConfig, addTableConfig } from "@/util/class.js"
+import { addPaginationConfig } from "@/components/pagination/configHook.js"
+import { addTableConfig } from "@/components/table/configHook.js"
 import { tableApi } from "@/api/index.js"
 import { tableMixin } from "@/util/mixins.js"
 
@@ -46,8 +47,6 @@ const mapList = [
     prop: 'amount2'
   },
 ]
-
-
 let config = addPaginationConfig({
   pageSize: 3,
   pageSizes: [2, 4, 6],

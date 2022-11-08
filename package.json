@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run serve\" \"npm run mock\"",
+    "mock": "nodemon  --watch src/mock/ src/mock/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "concurrently": "^7.5.0",
     "core-js": "^3.6.5",
     "css-loader": "^6.7.1",
     "element-ui": "^2.15.10",
+    "express": "^4.18.2",
     "loadsh": "0.0.4",
     "node-sass": "^4.14.0",
     "vue": "^2.6.11",
