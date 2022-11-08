@@ -9,7 +9,7 @@ npm start (启动服务)
 ```
 
 ## 功能：
-- 围绕表格的增删改查进行的封装
+- 围绕表格的增删改查进行的封装，以及分页组件的封装
 
 ## 技术栈：
 - vue.js(2) + elementUI + axios + sass + express
