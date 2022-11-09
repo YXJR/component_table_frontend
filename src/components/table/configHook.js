@@ -9,9 +9,7 @@ class TableClass {
   }
   getData() {
     this.loading = true
-    console.log("触发了getData")
     this.tableApi.getData().then((res) => {
-      console.log(res)
       this.tableData = res
       this.loading = false
     })
@@ -29,10 +27,10 @@ class TableClass {
         that.$message.error("新增失败")
       })
   }
-  edit(vm, data) {
+  edit(vm, id) {
     const that = vm
     this.tableApi
-      .edit(data)
+      .edit(id)
       .then(() => {
         that.$message.success("修改成功")
         this.getData()

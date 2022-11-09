@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import table from './modules/table.js'
+import Vue from "vue"
+import Vuex from "vuex"
+import table from "./modules/table.js"
 Vue.use(Vuex)
 
 let store = new Vuex.Store({
@@ -10,7 +10,6 @@ let store = new Vuex.Store({
   modules: {
     table,
   },
-  strict: true,
 })
 
 export default store
