@@ -1,11 +1,8 @@
-import axios from 'axios'
-
-//console.log(addLoading(getTableData))
-
+import axios from "axios"
 class HttpRequest {
   constructor() {
     this.baseURL =
-      process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:7001'
+      process.env.NODE_ENV === "production" ? "/" : "http://localhost:7001"
     this.timeout = 3000
   }
   setInterceptors(instance, url) {
@@ -32,27 +29,27 @@ class HttpRequest {
     return this.request({
       url: url,
       data: data,
-      method: 'get',
+      method: "get",
     })
   }
   post(url, data = {}) {
     return this.request({
       url: url,
-      method: 'post',
+      method: "post",
       data: data,
     })
   }
   delete(url, data = {}) {
     return this.request({
       url: url,
-      method: 'delete',
+      method: "delete",
       data: data,
     })
   }
   put(url, data = {}) {
     return this.request({
       url: url,
-      method: 'put',
+      method: "put",
       data: data,
     })
   }

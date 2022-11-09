@@ -60,6 +60,7 @@ class TableClass {
           .del(id)
           .then(() => {
             that.$message.success("删除成功")
+            this.getData()
           })
           .catch((err) => {
             that.$message.error(err.message)
