@@ -15,11 +15,11 @@ export const tableMixin = {
   },
   methods: {
     edit(row) {
-      this.$store.commit('SET_ISSHOW_DIALOG', true)
+      this.$store.commit("SET_ISSHOW_DIALOG", true)
       this.isAdd = row.id
     },
     add() {
-      this.$store.commit('SET_ISSHOW_DIALOG', true)
+      this.$store.commit("SET_ISSHOW_DIALOG", true)
       this.isAdd = null
     },
     view(row) {
@@ -27,7 +27,7 @@ export const tableMixin = {
       console.log(this.$route.path)
       //可以根据当前的路径配合路由配置表进行跳转操作
       this.$router.push({
-        name: 'detail',
+        name: "detail",
         params: {
           id: row.id,
         },
@@ -37,7 +37,7 @@ export const tableMixin = {
       this.TableConfig.del && this.TableConfig.del(this, row.id)
     },
     ensure(data) {
-      this.$store.commit('SET_ISSHOW_DIALOG', false)
+      this.$store.commit("SET_ISSHOW_DIALOG", false)
       if (!this.isAdd) {
         //新增
         this.TableConfig.add && this.TableConfig.add(this, data)

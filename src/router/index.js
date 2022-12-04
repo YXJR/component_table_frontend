@@ -20,7 +20,18 @@ const routes = [
     name: "detail",
     component: () => import("@/views/detail.vue"),
   },
+  {
+    path: "/purchaseAdd",
+    name: "purchaseAdd",
+    component: () => import("@/views/news.vue"),
+  },
+  {
+    path: "/returnAdd",
+    name: "returnAdd",
+    component: () => import("@/views/news.vue"),
+  },
 ]
+
 // const store = Vuex.Store()
 const router = new VueRouter({
   mode: "history",
