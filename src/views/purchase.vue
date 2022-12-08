@@ -20,6 +20,11 @@ export default {
     return {
     }
   },
+  /*
+    业务：针对A，B两个页面，都是表单提交，只是部分表单字段不同；A，B两个页面都有保存草稿和提交审批得按钮；
+     前端页面复用； 后端给了4个接口。 之前根据路由名称与点击时的按钮状态判断走哪个接口，有很多的if...else语句
+     现优化：使用策略模式，减少if...else语句，提高代码的可读性和可维护性
+  */
   methods: {
     choiceInterface (name) {
       let strategies = {
@@ -35,7 +40,6 @@ export default {
       this.choiceInterface(status)()
     }
   },
-
 }
 </script>
 
