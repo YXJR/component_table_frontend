@@ -23,12 +23,12 @@ const routes = [
   {
     path: "/purchaseAdd",
     name: "purchaseAdd",
-    component: () => import("@/views/news.vue"),
+    component: () => import("@/views/purchase.vue"),
   },
   {
     path: "/returnAdd",
     name: "returnAdd",
-    component: () => import("@/views/news.vue"),
+    component: () => import("@/views/purchase.vue"),
   },
 ]
 
